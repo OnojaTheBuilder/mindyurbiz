@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+  Mind Your Biz
+  Developed by onojathebuilder, github.com/OnojaTheBuilder
+  Delivered via makeitandmarket
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Mind Your Biz ft. Evan "The Biz"</title>
+<meta name="description" content="Get in touch with the Mind Your Biz team. Ask, book, consult or advertise with Evan &quot;The Biz.&quot;">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="hdr" class="solid">
+  <div class="wrap nav">
+    <a href="index.html" class="brand-mark"><span class="m">Mind Your Biz</span><span class="s">FT. EVAN "THE BIZ"</span></a>
+    <nav class="nav-links" id="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a class="nav-cta" href="#inquire">Get Started</a>
+    </nav>
+    <button class="burger" aria-label="Menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="blk inquiry" id="inquire" style="padding-top:130px">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="rise">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's<br>Talk Biz</h2>
+          <p class="intro">Whether you want to ask a question, book Evan, get coached or run an ad, start here. Check what you need and send the details.</p>
+          <div class="contact-block">
+            <p class="lbl">Email</p>
+            <p class="val"><a href="mailto:thebiz@mindyourbiz.biz">thebiz@mindyourbiz.biz</a></p>
+          </div>
+          <div class="contact-block">
+            <p class="lbl">Follow</p>
+            <p class="val"><a href="https://www.instagram.com/evanthebiz" target="_blank" rel="noopener">Instagram</a> · <a href="https://open.spotify.com/show/27Ph3D6W7KRR07Gb6TR6Oi" target="_blank" rel="noopener">Spotify</a></p>
+          </div>
+        </div>
+
+        <form name="inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form-grid rise d1" id="inquiryForm" style="margin-top:0">
+          <input type="hidden" name="form-name" value="inquiry">
+          <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+          <div>
+            <span class="checks-label">I'm interested in</span>
+            <div class="checks">
+              <label class="check"><input type="checkbox" name="interest" value="Ask The Biz"><span><span class="ct">Ask "The Biz"</span><span class="cs">Get my question answered on air</span></span></label>
+              <label class="check"><input type="checkbox" name="interest" value="Book The Biz"><span><span class="ct">Book "The Biz"</span><span class="cs">Speaking, hosting, MC or consulting</span></span></label>
+              <label class="check"><input type="checkbox" name="interest" value="Consultation / Coaching"><span><span class="ct">Consultation / Coaching</span><span class="cs">On the show or private 1-on-1</span></span></label>
+              <label class="check"><input type="checkbox" name="interest" value="Advertise On The Show"><span><span class="ct">Advertise</span><span class="cs">Run a spot on the podcast</span></span></label>
+            </div>
+          </div>
+
+          <div class="two">
+            <div class="field"><label for="name">Name</label><input type="text" id="name" name="name" placeholder="Your name" required></div>
+            <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="you@email.com" required></div>
+          </div>
+          <div class="two">
+            <div class="field"><label for="phone">Phone (optional)</label><input type="tel" id="phone" name="phone" placeholder="+1 …"></div>
+            <div class="field"><label for="link">Website or social link (optional)</label><input type="url" id="link" name="link" placeholder="https://…"></div>
+          </div>
+          <div class="field"><label for="message">Details</label><textarea id="message" name="message" placeholder="Tell us about your question, event, or brand…" required></textarea></div>
+          <div>
+            <button class="btn btn-gold" type="submit">Send Inquiry</button>
+            <p class="form-note" id="formNote"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-huge">Mind Your <span class="foil">Biz</span></div>
+    <div class="foot-row">
+      <span>© <span id="yr"></span> Mind Your Biz · Success Without BS</span>
+      <div class="foot-social">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="podcast.html">Podcast</a>
+        <a href="https://open.spotify.com/show/27Ph3D6W7KRR07Gb6TR6Oi" target="_blank" rel="noopener">Spotify</a>
+      </div>
+      <span>mindyourbiz.biz · built by <a href="https://makeitandmarket.com" target="_blank" rel="noopener">makeitandmarket</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

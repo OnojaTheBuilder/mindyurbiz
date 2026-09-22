@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>form detect</title></head>
+<body>
+<!-- This hidden page exists only so Netlify's build bot reliably registers the "inquiry" form.
+     Netlify scans static HTML at deploy time; this guarantees detection even if the visible
+     forms are ever changed. Visitors never see or need this page. -->
+<form name="inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="inquiry">
+  <input name="bot-field">
+  <input type="checkbox" name="interest" value="Ask The Biz">
+  <input type="checkbox" name="interest" value="Book The Biz">
+  <input type="checkbox" name="interest" value="Consultation / Coaching">
+  <input type="checkbox" name="interest" value="Advertise On The Show">
+  <input type="text" name="name">
+  <input type="email" name="email">
+  <input type="tel" name="phone">
+  <input type="url" name="link">
+  <textarea name="message"></textarea>
+</form>
+</body>
+</html>
