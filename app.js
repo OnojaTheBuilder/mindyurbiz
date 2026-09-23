@@ -31,6 +31,8 @@ document.querySelectorAll('.rise').forEach(function(el){io.observe(el);});
 
 // inquiry form: validate, then POST to Netlify via fetch so it works reliably
 // and we can show an inline success message (no dependency on a separate page).
+// Submissions go to Formspree (https://formspree.io/f/mvkgrglk).
+var FORMSPREE_ENDPOINT='https://formspree.io/f/mvkgrglk';
 var form=document.getElementById('inquiryForm');
 if(form){
   form.addEventListener('submit',function(e){
@@ -38,16 +40,15 @@ if(form){
     var note=document.getElementById('formNote');
     var checked=form.querySelectorAll('input[name="interest"]:checked').length;
     if(checked===0){
-      if(note) note.textContent='Pick at least one thing you\u2019re interested in.';
+      if(note){ note.style.color='var(--gold-bright)'; note.textContent='Pick at least one thing you\u2019re interested in.'; }
       return;
     }
     if(note){ note.style.color='var(--gold-bright)'; note.textContent='Sending…'; }
 
-    var data=new URLSearchParams(new FormData(form)).toString();
-    fetch('/',{
+    fetch(FORMSPREE_ENDPOINT,{
       method:'POST',
-      headers:{'Content-Type':'application/x-www-form-urlencoded'},
-      body:data
+      headers:{'Accept':'application/json'},
+      body:new FormData(form)
     }).then(function(res){
       if(res.ok){
         // swap the form for an inline thank-you block
@@ -55,7 +56,12 @@ if(form){
           +'<h2 style="color:var(--ivory);font-size:clamp(30px,4vw,48px)">You\u2019re In.</h2>'
           +'<p style="color:#c9c1b0;margin-top:14px;max-width:46ch">Thanks for reaching out. Evan\u2019s team has your message and will get back to you soon.</p></div>';
       } else {
-        if(note){ note.style.color='#e0785f'; note.textContent='Something went wrong. Email thebiz@mindyourbiz.biz instead.'; }
+        res.json().then(function(d){
+          var msg=(d&&d.errors&&d.errors.length)?d.errors.map(function(x){return x.message;}).join(', '):'Something went wrong. Email thebiz@mindyourbiz.biz instead.';
+          if(note){ note.style.color='#e0785f'; note.textContent=msg; }
+        }).catch(function(){
+          if(note){ note.style.color='#e0785f'; note.textContent='Something went wrong. Email thebiz@mindyourbiz.biz instead.'; }
+        });
       }
     }).catch(function(){
       if(note){ note.style.color='#e0785f'; note.textContent='Something went wrong. Email thebiz@mindyourbiz.biz instead.'; }
