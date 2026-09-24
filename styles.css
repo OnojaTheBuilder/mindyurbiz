@@ -99,7 +99,7 @@ footer{background:var(--ink);color:var(--ivory);padding:76px 0 40px}
 
 /* ---- offerings (home) ---- */
 .offers{display:grid;grid-template-columns:1fr;gap:0}
-.offer{display:grid;grid-template-columns:auto 1fr;gap:32px;padding:44px 0;border-top:1px solid var(--hair);align-items:start}
+.offer{display:grid;grid-template-columns:1fr;gap:0;padding:44px 0;border-top:1px solid var(--hair);align-items:start}
 .offer:last-child{border-bottom:1px solid var(--hair)}
 .offer .onum{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--gold);padding-top:8px}
 .offer h3{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(26px,3.4vw,44px);line-height:.98;letter-spacing:-.005em}
