@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ask The Biz — Mind Your Biz</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="ig-sidebar"><a href="https://instagram.com/evanthebiz" target="_blank">📷 Follow @evanthebiz</a></div>
+
+<header id="hdr" class="solid">
+  <div class="wrap nav">
+    <a href="index.html" class="brand-mark"><span class="m">Mind Your Biz</span><span class="s">FT. EVAN "THE BIZ"</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="ask-the-biz.html" class="active">Ask The Biz</a>
+      <a href="book-the-biz.html">Book The Biz</a>
+      <a href="consultation-coaching.html">Coaching</a>
+      <a href="advertise.html">Advertise</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">Free Advice</p>
+      <h1>Ask <span class="foil">"The Biz"</span></h1>
+      <p>Submit a selfie video or photo with your question for advice on air.</p>
+    </div>
+  </section>
+
+  <section class="blk inquiry">
+    <div class="wrap">
+      <h2>Question Category</h2>
+      <ul>
+        <li>Investing</li>
+        <li>Career advice (Changing, starting, assessing skills)</li>
+        <li>Starting a biz (Small or Big)</li>
+        <li>Scale a biz</li>
+        <li>Buying a biz</li>
+        <li>Personal purchase (Car, House, Surgery, etc.)</li>
+        <li>Life coaching (Relationships, Branding, Personal)</li>
+        <li>Mediating - Personal or Business (Dissolving partnerships, disputes)</li>
+      </ul>
+
+      <br><br>
+      <form class="form-grid" action="https://formspree.io/f/mvkgrglk" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_subject" value="New Ask The Biz Submission">
+        
+        <div class="field">
+          <label>Mandatory Upload: Selfie Video or Photo *</label>
+          <input type="file" name="media_upload" accept="video/*,image/*" required>
+        </div>
+
+        <div class="two">
+          <div class="field"><label>What's your name? *</label><input type="text" name="name" required></div>
+          <div class="field"><label>Where are you from? (State/City) *</label><input type="text" name="location" required></div>
+        </div>
+
+        <div class="two">
+          <div class="field"><label>Email Address *</label><input type="email" name="email" required></div>
+          <div class="field"><label>Phone Number (for scheduling text) *</label><input type="tel" name="phone" required></div>
+        </div>
+
+        <div class="field">
+          <label>Availability for a call-in to the podcast *</label>
+          <input type="text" name="podcast_availability" placeholder="e.g. Weekdays after 5 PM EST" required>
+        </div>
+
+        <div class="field">
+          <label>What's your question or advice seeking? *</label>
+          <textarea name="question" required></textarea>
+        </div>
+
+        <button class="btn btn-gold" type="submit">Submit To The Biz</button>
+      </form>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
