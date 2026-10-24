@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Consultation & Coaching — Mind Your Biz</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="ig-sidebar"><a href="https://instagram.com/evanthebiz" target="_blank">📷 Follow @evanthebiz</a></div>
+
+<header id="hdr" class="solid">
+  <div class="wrap nav">
+    <a href="index.html" class="brand-mark"><span class="m">Mind Your Biz</span><span class="s">FT. EVAN "THE BIZ"</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="ask-the-biz.html">Ask The Biz</a>
+      <a href="book-the-biz.html">Book The Biz</a>
+      <a href="consultation-coaching.html" class="active">Coaching</a>
+      <a href="advertise.html">Advertise</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">1-on-1 & Featured Sessions</p>
+      <h1>Consultation & <span class="foil">Coaching</span></h1>
+      <p>Consultation fee applies. Available as private 1-on-1 or posted to nearly half a million viewers.</p>
+    </div>
+  </section>
+
+  <section class="blk inquiry">
+    <div class="wrap">
+      <form class="form-grid" action="https://formspree.io/f/mvkgrglk" method="POST">
+        <input type="hidden" name="_subject" value="New Consultation Inquiry">
+
+        <div class="field">
+          <label>What kind of consultation or coaching is needed? *</label>
+          <select name="consultation_type" required>
+            <option value="Private 1-on-1">Private 1-on-1</option>
+            <option value="Posted to Audience (Half Million Viewers)">Posted to Half Million Viewers</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Please provide details on the subject in a brief paragraph *</label>
+          <textarea name="details" required></textarea>
+        </div>
+
+        <div class="two">
+          <div class="field"><label>Your Name *</label><input type="text" name="name" required></div>
+          <div class="field"><label>Name of Business *</label><input type="text" name="business_name" required></div>
+        </div>
+
+        <div class="two">
+          <div class="field"><label>Contact Phone Number *</label><input type="tel" name="phone" required></div>
+          <div class="field"><label>Email Address *</label><input type="email" name="email" required></div>
+        </div>
+
+        <button class="btn btn-gold" type="submit">Request Consultation</button>
+      </form>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
