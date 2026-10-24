@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book The Biz — Mind Your Biz</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="ig-sidebar"><a href="https://instagram.com/evanthebiz" target="_blank">📷 Follow @evanthebiz</a></div>
+
+<header id="hdr" class="solid">
+  <div class="wrap nav">
+    <a href="index.html" class="brand-mark"><span class="m">Mind Your Biz</span><span class="s">FT. EVAN "THE BIZ"</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="ask-the-biz.html">Ask The Biz</a>
+      <a href="book-the-biz.html" class="active">Book The Biz</a>
+      <a href="consultation-coaching.html">Coaching</a>
+      <a href="advertise.html">Advertise</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">Appearances & Events</p>
+      <h1>Book <span class="foil">"The Biz"</span></h1>
+      <p>Speaker, Host, Guest (Colleges, Seminars, Events, Podcasts, Radio, etc.)</p>
+    </div>
+  </section>
+
+  <section class="blk inquiry">
+    <div class="wrap">
+      <form class="form-grid" action="https://formspree.io/f/mvkgrglk" method="POST">
+        <input type="hidden" name="_subject" value="New Booking Request">
+
+        <div class="field">
+          <label>What's the event/occasion? *</label>
+          <input type="text" name="event_occasion" required>
+        </div>
+
+        <div class="two">
+          <div class="field"><label>Date of Event *</label><input type="date" name="event_date" required></div>
+          <div class="field">
+            <label>Format *</label>
+            <select name="format" required>
+              <option value="In Person">In Person</option>
+              <option value="Virtual">Virtual</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Location (City/State or Platform link) *</label>
+          <input type="text" name="location" required>
+        </div>
+
+        <div class="two">
+          <div class="field"><label>Your Name *</label><input type="text" name="name" required></div>
+          <div class="field"><label>Phone Number *</label><input type="tel" name="phone" required></div>
+        </div>
+
+        <div class="field"><label>Email Address *</label><input type="email" name="email" required></div>
+
+        <button class="btn btn-gold" type="submit">Submit Booking Inquiry</button>
+      </form>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
