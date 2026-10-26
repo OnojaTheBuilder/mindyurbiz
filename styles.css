@@ -210,3 +210,8 @@ footer{background:var(--ink);color:var(--ivory);padding:76px 0 40px}
 .offers .onum{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--gold)}
 .offers .offer h3{font-size:clamp(28px,3.6vw,46px);line-height:.98;color:var(--gold);margin-top:8px}
 .offers .lede{margin-top:14px;max-width:62ch;color:var(--ink)}
+
+/* GO buttons */
+.offers .btn-dark,.svc .go{font-size:15px;letter-spacing:.14em;padding:13px 38px}
+.svc .go{display:inline-block;align-self:flex-start;margin-top:auto;background:var(--ink);color:var(--gold-bright);border-radius:2px;padding:13px 38px;margin-top:22px}
+.svc:hover .go{background:var(--gold);color:var(--ink)}

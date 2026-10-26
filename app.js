@@ -24,6 +24,18 @@ var marq=document.getElementById('marq'); if(marq) marq.innerHTML+=marq.innerHTM
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
 document.querySelectorAll('.rise').forEach(function(el){io.observe(el);});
 
+// testimonial video fallback: if videos/testimonials.mp4 is missing, show the Google Drive copy
+document.querySelectorAll('video.auto[data-drive]').forEach(function(v){
+  v.addEventListener('error',function(){
+    var wrap=v.parentElement, id=v.getAttribute('data-drive');
+    var f=document.createElement('iframe');
+    f.src='https://drive.google.com/file/d/'+id+'/preview';
+    f.allow='autoplay; fullscreen'; f.allowFullscreen=true; f.title='Testimonials';
+    f.style.cssText='display:block;width:100%;aspect-ratio:16/9;border:0';
+    var b=wrap.querySelector('.vid-btn'); if(b) b.remove();
+    wrap.replaceChild(f,v);
+  });
+});
 // testimonial video: autoplays (muted, as browsers require), plays when on screen, pauses when off
 document.querySelectorAll('video.auto').forEach(function(v){
   v.muted=true; v.defaultMuted=true;
